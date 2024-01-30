@@ -1,0 +1,47 @@
+version: '3'
+services:
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - sqlite-container
+    environment:
+      - DB_CONNECTION_STRING=/data/initial-db.sqlite
+    volumes:
+      - sqlite_data:/data
+
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "3001:3000"
+    environment:
+      - REACT_APP_API_URL=http://backend:8080
+
+  sqlite-container:
+    image: alpine:latest
+    volumes:
+      - ./sqlite/database:/data
+    command: sh -c "apk --no-cache add sqlite && cp /data/initial-db.sqlite /data/db.sqlite && sqlite3 /data/db.sqlite < /data/init-script.sql && echo 'Initialization completed successfully' && tail -f /dev/null"
+    container_name: sqlite-container
+
+  sqlitebrowser:
+    image: linuxserver/sqlitebrowser
+    ports:
+      - "3000:3000"
+    depends_on:
+      - sqlite-container
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=UTC
+      - ENABLE_UWSGI=true
+    volumes:
+      - sqlite_data:/data/db
+    container_name: sqlitebrowser
+
+volumes:
+  sqlite_data:
+    external: true
