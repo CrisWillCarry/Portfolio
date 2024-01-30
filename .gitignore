@@ -1,0 +1,14 @@
+# Node.js
+node_modules/
+
+# Compiled TypeScript
+*.js
+*.js.map
+
+# React
+build/
+dist/
+*.log
+
+# SQLite
+*.sqlite
