@@ -18,7 +18,7 @@ const Intro = () => {
       <div className="text-white lg:text-left pr-8">
         <h1 className="flex text-4xl lg:text-5xl font-bold mb-4">Hi everyone! <span className="animate-[wave_5s_ease-in-out_5]">👋🏻</span></h1>
         <p className="text-6xl lg:text-6xl text-blue-400">
-          <span className="text-blue-500 sm:text-red-500">My name is Cristian,</span> I'm a Software Developer. 🚀📚
+          <span className="text-red-500">My name is Cristian,</span> I'm a Software Developer. 🚀📚
         </p>
         <div
           className="border rounded-3xl p-6 inline-block mt-10 text-3xl hover:text-blue-800 cursor-pointer hover:border-blue-800 hover:scale-110 sm:mb-5"

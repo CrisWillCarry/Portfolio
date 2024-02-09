@@ -10,8 +10,8 @@ import ProjectDisplay from "./ProjectDisplay";
     }, []);
 
     return (
-      <div id="projects" className=" bg-white rounded-lg p-8 shadow-md max-w-full lg:mr-40 lg:ml-48">
-        <h2 className="text-3xl font-bold text-center mb-8">PROJECTS</h2>
+      <div id="projects" className=" bg-black rounded-lg p-8 shadow-md max-w-full lg:mr-40 lg:ml-48">
+        <h2 className="text-6xl font-semibold text-center text-white mb-8">PROJECTS</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {projects.map((project) => (
             <ProjectDisplay
@@ -19,8 +19,13 @@ import ProjectDisplay from "./ProjectDisplay";
               title={project.title}
               description={project.description}
               link={project.link}
+              video={project.video}
+              skills={project.skills}
+              logo={project.logo}
+              github={project.github}
+              videoLink={project.videoLink ? project.videoLink : ''}
             />
-            ))}
+          ))}
         </div>
       </div>
     );

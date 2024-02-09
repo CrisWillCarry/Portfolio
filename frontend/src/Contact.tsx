@@ -13,8 +13,10 @@ const Contact: React.FC = () => {
                 <div className="flex flex-col lg:flex-row">
                     <div className="flex flex-col">
                         <div>
+                             <a href="tel:+14388846245">
                             <img src="phone.gif" alt="phone" className="inline" style={{ width: '10vh', height: '10vh' }} />
                             <span className="ml-4">+1 (438)-884-6245</span>
+                            </a>
                         </div>
                         <div className="mt-4">
                         <a href="mailto: cf93082@gmail.com">
