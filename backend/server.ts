@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 import ReviewRouter from './ReviewRouter';
 import { initDatabase } from './db/db';
 
@@ -9,6 +10,11 @@ const startServer = async () => {
   try {
     // Await the initDatabase() function to get the actual Database instance
     const db = await initDatabase();
+
+    app.use(cors(
+      { origin: 'http://localhost:3002',
+        methods: 'GET,POST,DELETE'}
+    ));
 
     app.use(express.json());
 

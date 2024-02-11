@@ -1,7 +1,12 @@
 import { useEffect, useRef } from "react";
 import { jwtDecode } from 'jwt-decode';
 
-const LoginButton = () => {
+interface LoginButtonProps {
+    onLogin: () => void; 
+}
+
+
+const LoginButton: React.FC<LoginButtonProps> = ({onLogin}) => {
     const googleButton = useRef<HTMLDivElement>(null); // Change useRef type to HTMLDivElement
     let google: any = null;
 
@@ -40,7 +45,7 @@ const LoginButton = () => {
       sessionStorage.setItem('user', JSON.stringify(user));
       console.log(user)
 
-      document.dispatchEvent(new Event('userLoggedIn'));
+      onLogin();
     };
 
     const handleGoogleButtonClick = () => {
@@ -53,7 +58,7 @@ const LoginButton = () => {
             <div
                 ref={googleButton}
                 onClick={handleGoogleButtonClick}
-                className="flex justify-center items-center bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded cursor-pointer"
+                className="flex justify-center items-center  text-white font-bold py-2 px-4 rounded cursor-pointer w-1/6 mt-4"
             >
                 <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google Icon" className="w-6 h-6 mr-2" />
                 Login with Google

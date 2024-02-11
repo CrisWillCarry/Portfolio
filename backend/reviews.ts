@@ -1,5 +1,5 @@
 export interface Review {
-    name: string;
+    username: string;
     stars: number;
     comment: string;
     picture: string;
