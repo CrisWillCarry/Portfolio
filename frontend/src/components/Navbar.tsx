@@ -56,6 +56,12 @@ const Navbar: React.FC<{ activeSection: string }> = ({ activeSection }) => {
               About
             </li>
             <li
+              className={`text-white text-base sm:text-lg font-mono font-bold hover:bg-gray-700 px-2 py-1 rounded cursor-pointer ${activeSection === 'reviews' && 'bg-gray-700'}`}
+              onClick={() => scrollToSection('reviews')}
+            >
+              Reviews
+            </li>
+            <li
               className={`text-white text-base  hover:scale-110 border sm:text-lg font-mono font-bold hover:bg-gray-700 px-2 py-1 rounded cursor-pointer ${activeSection === 'contact' && 'bg-gray-700'}`}
               onClick={() => scrollToSection('contact')}
             >

@@ -26,6 +26,22 @@ const Contact: React.FC = () => {
                             </span>
                         </a>
                         </div>
+                        <div className=" mt-4">
+                            <a href='https://github.com/CrisWillCarry'>
+                            <img src='/github.png' alt='github' className='inline' style={{ width: '10vh', height: '10vh' }} />
+                            <span className="ml-4">
+                                CrissWillCarry
+                            </span>
+                            </a>
+                        </div>
+                        <div className="mt-4">
+                            <a href='https://www.linkedin.com/in/cristian-barros-ferreira-2b5b84232/'>
+                            <img src='/linkedin.png' alt='linkedin' className='inline' style={{ width: '10vh', height: '10vh' }} />
+                            <span className="ml-4">
+                                Cristian Barros Ferreira
+                            </span>
+                            </a>
+                        </div>
                         <div className="mt-8">
                             <img src="location.gif" alt="location" className="inline -mt-10" style={{ width: '10vh', height: '10vh' }} />
                             <span className="ml-4">Montreal, Quebec, Canada</span>
@@ -34,6 +50,7 @@ const Contact: React.FC = () => {
                     <div className="ml-0 xl:ml-auto md:mr-0 xl:mr-96">
                         <img src="contact.png" alt="contact" className="inline" style={{ width: '60vh', height: '60vh' }} />
                     </div>
+
                 </div>
             </div>
         </div>

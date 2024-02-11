@@ -7,6 +7,7 @@ import About from './About';
 import Contact from './Contact';
 import './App.css';
 import Skills from './SkillsDisplay';
+import Reviews from './Reviews';
 
 function App() {
   const [activeSection, setActiveSection] = useState('');
@@ -18,6 +19,7 @@ function App() {
       const aboutSection = document.getElementById('about');
       const contactSection = document.getElementById('contact');
       const skillsSection = document.getElementById('skills');
+      const reviewsSection = document.getElementById('reviews');
 
       const scrollPosition = window.scrollY + window.innerHeight / 2;
 
@@ -26,7 +28,8 @@ function App() {
         projectSection && 
         aboutSection && 
         contactSection &&
-        skillsSection
+        skillsSection &&
+        reviewsSection
       ) {
         if (scrollPosition < projectSection.offsetTop) {
           setActiveSection('intro');
@@ -43,10 +46,16 @@ function App() {
         }
         else if (
           scrollPosition >= aboutSection.offsetTop && 
-          scrollPosition < contactSection.offsetTop
+          scrollPosition < reviewsSection.offsetTop
         ) {
           setActiveSection('about');
-        } else {
+        } else if (
+          scrollPosition >= reviewsSection.offsetTop && 
+          scrollPosition < contactSection.offsetTop
+        ) {
+          setActiveSection('reviews');
+        }
+        else {
           setActiveSection('contact');
         }
       }
@@ -66,6 +75,7 @@ function App() {
       <ProjectSection />
       <Skills/>
       <About />
+      <Reviews />
       <Contact />
       <Footer />
     </div>

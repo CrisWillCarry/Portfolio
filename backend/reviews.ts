@@ -1,5 +1,7 @@
 export interface Review {
-    username: string;
-    rating: number;
+    name: string;
+    stars: number;
     comment: string;
+    picture: string;
+    created_at: Date;
   }

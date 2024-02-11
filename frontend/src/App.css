@@ -23,7 +23,12 @@
   transition: background-color 0.5s ease;
 }
 
-.contact {
+.reviews {
   background-color: #3d04c2;
+  transition: background-color 0.5s ease;
+}
+
+.contact {
+  background-color: #4d01ff;
   transition: background-color 0.5s ease;
 }

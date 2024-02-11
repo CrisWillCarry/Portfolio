@@ -5,10 +5,10 @@ class ReviewController {
   constructor(private db: Database) {}
 
   async createReview(review: Review): Promise<Review> {
-    const {username, rating, comment} = review;
-    const sql = 'INSERT INTO reviews (username, rating, comment) VALUES (?, ?, ?)';
+    const {name, stars, comment, picture} = review;
+    const sql = 'INSERT INTO reviews (username, stars, comment, picture) VALUES (?, ?, ?, ?)';
 
-    const result = await this.db.run(sql, [username, rating, comment]);
+    const result = await this.db.run(sql, [name, stars, comment, picture]);
     if (result.lastID) {
       const createdReview = await this.getReviewById(result.lastID);
       return createdReview!;
