@@ -8,4 +8,4 @@ COPY initial-db.sqlite /db/
 # Expose the port if needed
 # EXPOSE 1433
 # Command to run when the container starts
-CMD ["sqlite3", "/data/initial-db.sqlite"]
+CMD ["sqlite3", "/data/db.sqlite"]

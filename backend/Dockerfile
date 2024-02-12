@@ -1,6 +1,5 @@
 # Use an official Node.js image as a parent image with alpine variant
-FROM node
-
+FROM node:14.14-alpine
 # Set the working directory to /app
 WORKDIR /app
 
@@ -17,8 +16,6 @@ COPY . .
 RUN npm run build
 
 WORKDIR /app/dist
-# Expose the port the app runs on
-EXPOSE 8080
 
 # Run the application
 CMD node server.js

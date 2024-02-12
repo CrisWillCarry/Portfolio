@@ -4,7 +4,7 @@ import ReviewRouter from './ReviewRouter';
 import { initDatabase } from './db/db';
 
 const app = express();
-const port = 8080;
+const port = process.env.PORT;
 
 const startServer = async () => {
   try {
@@ -12,7 +12,7 @@ const startServer = async () => {
     const db = await initDatabase();
 
     app.use(cors(
-      { origin: 'http://localhost:3002',
+      { origin: `${process.env.FRONT_END_URI}`,
         methods: 'GET,POST,DELETE'}
     ));
 

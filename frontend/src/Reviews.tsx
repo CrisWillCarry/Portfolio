@@ -24,7 +24,7 @@ const Reviews: React.FC = () => {
     const rainbowColors = ["red", "orange", "yellow", "green", "blue", "indigo", "purple"];
 
     const getReviews = () => {
-        fetch("http://localhost:8080/api/reviews")
+        fetch(process.env.REACT_APP_API_URL+"reviews")
         .then(response => response.json())
         .then(data => setReviews(data))
         .catch(error => console.log(error));
