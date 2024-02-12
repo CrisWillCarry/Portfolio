@@ -8,6 +8,7 @@ services:
     depends_on:
       - sqlite-container
     environment:
+      - NODE_ENV=$UI_NODE_ENV=$API_NODE_ENV
       - DB_CONNECTION_STRING=/data/initial-db.sqlite
       - PORT=$API_PORT
       - FRONT_END_URI= $REACT_APP_URI
