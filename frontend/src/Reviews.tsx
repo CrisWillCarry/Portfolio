@@ -21,6 +21,7 @@ const Reviews: React.FC = () => {
         }
     }, []);
 
+
     const rainbowColors = ["red", "orange", "yellow", "green", "blue", "indigo", "purple"];
 
     const getReviews = () => {

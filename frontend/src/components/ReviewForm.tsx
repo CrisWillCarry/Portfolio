@@ -45,8 +45,7 @@ const ReviewForm: React.FC<ReviewFormProps> = ({ onClose }) => {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         
-
-        fetch("http://localhost:8080/api/reviews", { 
+        fetch(process.env.REACT_APP_API_URL+"reviews", { 
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
