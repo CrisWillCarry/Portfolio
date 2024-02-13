@@ -9,11 +9,11 @@ services:
       - sqlite-container
     environment:
       - NODE_ENV=$UI_NODE_ENV=$API_NODE_ENV
-      - DB_CONNECTION_STRING=/data/initial-db.sqlite
+      - DB_CONNECTION_STRING=/data/db.sqlite 
       - PORT=$API_PORT
-      - FRONT_END_URI= $REACT_APP_URI
+      - FRONT_END_URI=$REACT_APP_URI
     volumes:
-      - sqlite_data:/data
+      - ./sqlite/database:/data  
 
   frontend:
     build:
@@ -23,34 +23,15 @@ services:
     environment:
       - NODE_ENV=$UI_NODE_ENV
       - PORT=$UI_PORT
-      - REACT_APP_API_URL= $REACT_APP_API_HOST
+      - REACT_APP_API_URL=$REACT_APP_API_HOST
     volumes:
       - ./frontend:/app
       - /app/node_modules
     stdin_open: true
 
   sqlite-container:
-    image: alpine:latest
-    volumes:
-      - ./sqlite/database:/data
-    command: sh -c "apk --no-cache add sqlite && cp /data/initial-db.sqlite /data/db.sqlite && sqlite3 /data/db.sqlite < /data/init.sql && echo 'Initialization completed successfully' && tail -f /dev/null"
+    build: 
+      context: ./sqlite
+    image: sqlite_db
     container_name: sqlite-container
 
-  sqlitebrowser:
-    image: linuxserver/sqlitebrowser
-    ports:
-      - "3000:3000"
-    depends_on:
-      - sqlite-container
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=UTC
-      - ENABLE_UWSGI=true
-    volumes:
-      - sqlite_data:/data/db
-    container_name: sqlitebrowser
-
-volumes:
-  sqlite_data:
-    external: true

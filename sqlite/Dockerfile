@@ -1,11 +1,16 @@
 FROM alpine:latest
+
 # Install SQLite
 RUN apk --no-cache add sqlite
+
 # Create a directory to store the database
-WORKDIR /db
+WORKDIR /data
+
 # Copy your SQLite database file into the container
-COPY initial-db.sqlite /db/
-# Expose the port if needed
-# EXPOSE 1433
-# Command to run when the container starts
-CMD ["sqlite3", "/data/db.sqlite"]
+COPY database/initial-db.sqlite /data/
+
+# Copy your init SQL script into the container
+COPY database/init.sql /data/
+
+# Run the SQL script to initialize the database and keep the container running
+CMD ["sh", "-c", "sqlite3 /data/db.sqlite < /data/init.sql && tail -f /dev/null"]
