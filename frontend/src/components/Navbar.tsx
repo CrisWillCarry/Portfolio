@@ -26,7 +26,7 @@ const Navbar: React.FC<{ activeSection: string }> = ({ activeSection }) => {
               <img src='/github.png' alt='github' className='rounded cursor-pointer' style={{ width: '7vh', height: '7vh' }} />
             </a>
             <a href='https://www.linkedin.com/in/cristian-barros-ferreira-2b5b84232/'>
-              <img src='/linkedin.png' alt='linkedin' className='rounded cursor-pointer' style={{ width: '7vh', height: '7vh' }} />
+              <img src='/linkedIn.png' alt='linkedin' className='rounded cursor-pointer' style={{ width: '7vh', height: '7vh' }} />
             </a>
           </div>
 
