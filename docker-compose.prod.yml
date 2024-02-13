@@ -15,17 +15,22 @@ services:
     volumes:
       - ./sqlite/database:/data  
 
-  frontend:
+  frontend_build:
     build:
       context: ./frontend
     environment:
       - NODE_ENV=$UI_NODE_ENV
-      - PORT=$UI_PORT
       - REACT_APP_API_URL=$REACT_APP_API_HOST
     volumes:
-      - ./frontend:/app
+      - ./frontend/build:/app/build
       - /app/node_modules
-    stdin_open: true
+    
+  frontend_server:
+    image: nginx:alpine
+    volumes:
+      - ./frontend/build:/usr/share/nginx/html
+    ports:
+      - 80:80
 
   sqlite-container:
     build: 
