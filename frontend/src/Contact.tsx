@@ -36,7 +36,7 @@ const Contact: React.FC = () => {
                         </div>
                         <div className="mt-4">
                             <a href='https://www.linkedin.com/in/cristian-barros-ferreira-2b5b84232/'>
-                            <img src='/linkedin.png' alt='linkedin' className='inline' style={{ width: '10vh', height: '10vh' }} />
+                            <img src='/linkedIn.png' alt='linkedin' className='inline' style={{ width: '10vh', height: '10vh' }} />
                             <span className="ml-4">
                                 Cristian Barros Ferreira
                             </span>
