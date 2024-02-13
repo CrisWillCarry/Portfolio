@@ -10,5 +10,3 @@ build/
 dist/
 *.log
 
-# SQLite
-*.sqlite
