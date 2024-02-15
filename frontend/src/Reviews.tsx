@@ -64,7 +64,7 @@ const Reviews: React.FC = () => {
 
     return (
         <div id="reviews" className="mt-10 flex justify-center items-center">
-            <div className="w-full sm:w-5/6 md:w-4/6 lg:w-3/6 xl:w-2/3 text-white border rounded-xl bg-blue-500 shadow-lg p-4">
+            <div className="w-full sm:w-5/6 md:w-4/6 lg:w-3/6 xl:w-2/3 text-white border rounded-xl bg-blue-500 shadow-lg p-4 relative">
                 <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-8">
                     Portfolio{" "}
                     {rainbowColors.map((color, index) => (
@@ -75,14 +75,14 @@ const Reviews: React.FC = () => {
                 </h1>
 
                 <div className="flex flex-col items-center">
-                    <div className="mb-4">
+                    <div className="mb-4 flex items-center">
                         {currentIndex > 0 && (
                             <button className="mr-4" onClick={goToPreviousReview}>
                                 <span role="img" className="text-2xl sm:text-3xl" aria-label="Left Arrow">⬅️</span>
                             </button>
                         )}
                         {reviews.length > 0 && (
-                            <div className={`transition-opacity ${isTransitioning ? "opacity-0" : "opacity-100"}`}>
+                            <div className={`flex-grow transition-opacity ${isTransitioning ? "opacity-0" : "opacity-100"}`}>
                                 <ReviewBlock
                                     key={currentIndex}
                                     comment={(reviews[currentIndex] as { comment: string }).comment}
