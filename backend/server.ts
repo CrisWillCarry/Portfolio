@@ -19,7 +19,7 @@ const startServer = async () => {
     app.use(express.json());
 
     const reviewRouter = new ReviewRouter(db);
-    app.use('/api', reviewRouter.getRouter());
+    app.use('/', reviewRouter.getRouter());
 
     app.listen(port, () => {
       console.log(`Server is running on port ${port}`);
