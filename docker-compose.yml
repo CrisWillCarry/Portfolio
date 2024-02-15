@@ -20,8 +20,6 @@ services:
     container_name: frontend
     build:
       context: ./frontend
-    ports:
-      - 3000:3000
     environment:
       - NODE_ENV=$UI_NODE_ENV
       - PORT=$UI_PORT
