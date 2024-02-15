@@ -20,8 +20,8 @@ const About: React.FC = () => {
                     <p>Outside of coding, I like to focus on fitness. I regularly go to the gym and play soccer once a week, which helps me stay active and maintain a healthy work-life balance.</p>
                 </div>
                 <div className="flex xl:flex-col md:flex-row justify-center items-center mx-auto mt-8 xl:mt-0 xl:w-1/2">
-                    <img src="about.png" alt="about" className="inline ml-10 max-w-full max-h-full" />
-                    <img src="family.png" alt="about" className="inline ml-10 max-w-full max-h-full" />
+                    <img src="about.png" alt="about" className="inline ml-10" style={{ width: '30vh', height: '30vh' }} />
+                    <img src="family.png" alt="about" className="inline ml-10" style={{ width: '30vh', height: '30vh' }} />
                 </div>
             </div>
         </div>
