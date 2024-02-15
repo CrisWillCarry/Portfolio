@@ -18,6 +18,7 @@ services:
 
   frontend:
     container_name: frontend
+    hostname: frontend
     build:
       context: ./frontend
     environment:
