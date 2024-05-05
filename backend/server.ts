@@ -1,10 +1,10 @@
 import express from 'express';
 import cors from 'cors';
 import ReviewRouter from './ReviewRouter';
-import { initDatabase } from './db/db';
+import { initDatabase } from './database/db';
 
 const app = express();
-const port = process.env.PORT;
+const port = process.env.API_PORT || 8080;
 
 const startServer = async () => {
   try {

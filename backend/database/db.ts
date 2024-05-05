@@ -3,7 +3,7 @@ import { open, Database } from 'sqlite';
 
 export async function initDatabase(): Promise<Database> {
   const db = await open({
-    filename: process.env.DB_CONNECTION_STRING || './database/mydatabase.db', 
+    filename: process.env.DB_CONNECTION_STRING || './database/db.sqlite', 
     driver: sqlite3.Database,
   });
 
