@@ -3,7 +3,7 @@ import ReviewBlock from "./components/ReviewBlock";
 import LoginButton from "./components/loginButton";
 import ReviewForm from "./components/ReviewForm";
 
-const Reviews: React.FC = () => {
+const Reviews: React.FC<{language: String}> = ({language}) => {
     const [reviews, setReviews] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -102,12 +102,12 @@ const Reviews: React.FC = () => {
                     {!isLoggedIn ? (
                         <div className="flex flex-col justify-center items-center">
                             <LoginButton onLogin={handleLogin} />
-                            <div className="text-sm">*Needed to leave a review*</div>
+                            <div className="text-sm">{language==='en'?<p>*Needed to leave a review*</p>:<p>*Nécessaire afin de laisser un avis*</p>}</div>
                         </div>
                     ) : (
                         <div className="flex flex-col justify-center items-center">
                             <button className="bg-green-500 text-white px-4 py-2 rounded-md" onClick={handleLeaveReviewClick}>
-                                Leave a Review
+                                {language==='en'?<p>Leave a Review</p>:<p>Laisser un avis</p>}
                             </button>
                         </div>
                     )}

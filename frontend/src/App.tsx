@@ -11,6 +11,7 @@ import Reviews from './Reviews';
 
 function App() {
   const [activeSection, setActiveSection] = useState('');
+  const [language, setLanguage] = useState('en');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -68,16 +69,24 @@ function App() {
     };
   }, []);
 
+  function changeLanguage() {
+    if (language === 'en') {
+      setLanguage('fr');
+    } else {
+      setLanguage('en');
+    }
+  }
+
   return (
     <div className={`App min-h-screen ${activeSection}`}>
-      <Navbar activeSection={activeSection} />
-      <Intro />
-      <ProjectSection />
-      <Skills/>
-      <About />
-      <Reviews />
-      <Contact />
-      <Footer />
+      <Navbar activeSection={activeSection} changeLanguage={changeLanguage} language={language}/>
+      <Intro language={language}/>
+      <ProjectSection language={language} />
+      <Skills language={language}/>
+      <About language={language} />
+      <Reviews language={language}/>
+      <Contact language={language}/>
+      <Footer languague={language}/>
     </div>
   );
 }

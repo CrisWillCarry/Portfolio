@@ -1,13 +1,13 @@
-const Contact: React.FC = () => {
+const Contact: React.FC<{language: String}> = ({language}) => {
     return (
         <div id="contact" className="mt-10 xl:ml-32 md:ml-28 sm:ml-9 text-left text-white"> {/* Add text-left class */}
             <h1 className="font-bold text-7xl mb-8">
-                <span className="text-blue-300">Contact</span>
-                <span className="text-green-300"> Me</span>
+                <span className="text-blue-300">{language==='en'?<span>Contact</span>:<span>Contactez-</span>}</span>
+                <span className="text-green-300">{language==='en'?<span> Me</span>:<span>Moi</span>}</span>
             </h1>
 
             <div className="text-2xl ">
-                If you have any questions or would like to collaborate, please feel free to contact me:
+                {language==='en'?<p>If you have any questions or would like to collaborate, please feel free to contact me:</p>:<p>Si vous avez des questions ou souhaitez collaborer, n'hésitez pas à me contacter:</p>}
             </div>
             <div className="text-xl mt-10">
                 <div className="flex flex-col lg:flex-row">
@@ -30,7 +30,7 @@ const Contact: React.FC = () => {
                             <a href='https://github.com/CrisWillCarry'>
                             <img src='/github.png' alt='github' className='inline' style={{ width: '10vh', height: '10vh' }} />
                             <span className="ml-4">
-                                CrissWillCarry
+                                Cris WillCarry
                             </span>
                             </a>
                         </div>

@@ -9,10 +9,11 @@ interface ProjectDisplayProps {
   skills: Skill[];
   video: Boolean;
   github: string;
+  language: String;
   onClose: () => void;
 }
 
-const ProjectDisplay: React.FC<ProjectDisplayProps> = ({ title, description, link, videoLink, skills, video, github, onClose }) => {
+const ProjectDisplay: React.FC<ProjectDisplayProps> = ({ title, description, link, videoLink, skills, video, github,language, onClose }) => {
 
   return (
     <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center z-50 bg-black bg-opacity-50" onClick={onClose}>
@@ -29,17 +30,17 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({ title, description, lin
         <div className='flex justify-center sm:justify-start'>
           <a href={github} target="_blank" rel="noreferrer" className="flex items-center text-black mr-4">
             <img src='github.png' alt='Github link' className="h-6 w-6 mr-1" />
-            <span>View Project</span>
+            <span>{language==='en'?<p>View Project</p>:<p>Voir Projet</p>}</span>
           </a>
           {video ?
             <a href={videoLink} target="_blank" rel="noreferrer" className="flex items-center text-black">
               <img src='youtube.png' alt='Youtube link' className="mr-1" style={{ width: '1.5rem', height: '1.5rem' }}/>
-              <span>View Video</span>
+              <span>{language==='en'?<p>View Video</p>: <p>Voir Video</p>}</span>
             </a> :
             link !== "" ?
               <a href={link} target="_blank" rel="noreferrer" className="flex items-center text-black">
                 <img src='www.png' alt='Link' className="mr-1" style={{ width: '1.5rem', height: '1.5rem' }} />
-                <span>View Website</span>
+                <span>{language==='en'?<p>View Website</p>:<p>Voir site Web</p>}</span>
               </a>
               : <></>
           }
@@ -58,9 +59,10 @@ interface ProjectThumbnailProps {
   skills: Skill[];
   logo: string;
   github: string;
+  language: String;
 }
 
-const ProjectThumbnail: React.FC<ProjectThumbnailProps> = ({ title, github, description, videoLink, link, video, skills, logo }) => {
+const ProjectThumbnail: React.FC<ProjectThumbnailProps> = ({ title, github, description, videoLink, link, video, skills, logo, language }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
@@ -83,7 +85,7 @@ const ProjectThumbnail: React.FC<ProjectThumbnailProps> = ({ title, github, desc
           ))}
         </div>
       </div>
-      {isOpen && <ProjectDisplay title={title} description={description} link={link} skills={skills} github={github} videoLink={videoLink} video={video} onClose={handleClose} />}
+      {isOpen && <ProjectDisplay title={title} description={description} link={link} skills={skills} github={github} videoLink={videoLink} video={video} language={language} onClose={handleClose} />}
     </>
   );
 };

@@ -4,7 +4,8 @@ export interface Project {
     id: number;
     title: string;
     logo: string;
-    description: string;
+    description_en: string;
+    description_fr: string;
     link: string;
     github: string;
     video : Boolean;
@@ -17,7 +18,8 @@ export const Projects: Project[] = [
         id: 1,
         title: "ACMS",
         logo: "acms.svg",
-        description: " An end-to-end web application for Atelier Mecanique CMS Inc. The system orchestrates appointment management, cost computation, and billing interactions with clients. ",
+        description_en: " An end-to-end web application for Atelier Mecanique CMS Inc. The system orchestrates appointment management, cost computation, and billing interactions with clients. ",
+        description_fr: "Une application web de bout en bout pour Atelier Mecanique CMS Inc. Le système orchestre la gestion des rendez-vous, le calcul des coûts et les interactions de facturation avec les clients.",
         link: "https://react-atelier.onrender.com/",
         github: "https://github.com/CrisWillCarry/ateliermecanique-ws/tree/main",
         video: false,
@@ -63,7 +65,8 @@ export const Projects: Project[] = [
         id: 2,
         title: "BusBellos",
         logo: "bussbellos.png",
-        description: "A simple 2D game developed in Unity. The game is about a busboy who has to clean the tables and collect the dirty dishes while his boss chases him down. The game has a scoring system and a timer. Each round gets harder as the boss hits harder and runs faster",
+        description_en: "A simple 2D game developed in Unity. The game is about a busboy who has to clean the tables and collect the dirty dishes while his boss chases him down. The game has a scoring system and a timer. Each round gets harder as the boss hits harder and runs faster",
+        description_fr: "Un jeu 2D simple développé en Unity. Le jeu est sur un garçon de bus qui doit nettoyer les tables et collecter les plats sales tandis que son patron le poursuit. Le jeu a un système de score et une minuterie. Chaque tour devient plus difficile à mesure que le patron frappe plus fort et court plus vite.",
         link: "",
         videoLink: "https://www.youtube.com/watch?v=--UKqFLyOOA",
         github: "https://github.com/CrisWillCarry/BussBoyGame",
@@ -95,7 +98,8 @@ export const Projects: Project[] = [
     {
         id: 3,
         title: "SecuriSense",
-        description: "A Raspberry Pi-powered security system employing infrared laser detection, capturing scenes with a camera upon intrusion. The system swiftly sends images to an external Flask API, generating a comprehensive frontend display via an authenticated Flask application.",
+        description_en: "A Raspberry Pi-powered security system employing infrared laser detection, capturing scenes with a camera upon intrusion. The system swiftly sends images to an external Flask API, generating a comprehensive frontend display via an authenticated Flask application.",
+        description_fr: "Un système de sécurité alimenté par Raspberry Pi utilisant la détection laser infrarouge, capturant des scènes avec une caméra lors d'une intrusion. Le système envoie rapidement des images à une API Flask externe, générant un affichage frontal complet via une application Flask authentifiée.",
         videoLink: "https://www.youtube.com/watch?v=fUiuS75jqHA",
         link: "",
         logo: "raspberry.jpg",
@@ -142,7 +146,8 @@ export const Projects: Project[] = [
     {
         id: 4,
         title: "Pet Clinic",
-        description: " A web platform for managing pet clinics. It allows admins to oversee staff and empowers receptionists to handle appointments and billing efficiently.",
+        description_en: " A web platform for managing pet clinics. It allows admins to oversee staff and empowers receptionists to handle appointments and billing efficiently.",
+        description_fr: "Une plateforme web pour gérer les cliniques vétérinaires. Il permet aux administrateurs de superviser le personnel et donne aux réceptionnistes les moyens de gérer efficacement les rendez-vous et la facturation.",
         link: "",
         logo: "spring.png",
         github: "https://github.com/cgerard321/champlain_petclinic",
