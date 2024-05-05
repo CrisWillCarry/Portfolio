@@ -1,14 +1,14 @@
 # Use an official Node.js image as a parent image with alpine variant
 FROM node:14.14-alpine
 
+# Set the working directory to /app
+WORKDIR /app
+
 # Copy package.json and package-lock.json to the working directory
 COPY package*.json ./
 
-# Install app dependencies (production dependencies only)
-RUN npm install --only=production
-
-# Install TypeScript globally (if needed)
-RUN npm install -g typescript
+# Install app dependencies
+RUN npm install
 
 # Copy the rest of the application code
 COPY . .
