@@ -25,7 +25,7 @@ const Reviews: React.FC<{language: String}> = ({language}) => {
     const rainbowColors = ["red", "orange", "yellow", "green", "blue", "indigo", "purple"];
 
     const getReviews = () => {
-        fetch(process.env.REACT_APP_API_URL+"reviews")
+        fetch("https://portfolio-backend-q8g4.onrender.com/reviews")
         .then(response => response.json())
         .then(data => setReviews(data))
         .catch(error => console.log(error));

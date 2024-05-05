@@ -45,7 +45,7 @@ const ReviewForm: React.FC<ReviewFormProps> = ({ onClose }) => {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         
-        fetch(process.env.REACT_APP_API_URL+"reviews", { 
+        fetch("https://portfolio-backend-q8g4.onrender.com/reviews", { 
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
