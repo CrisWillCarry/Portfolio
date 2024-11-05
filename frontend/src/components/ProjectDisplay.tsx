@@ -28,10 +28,12 @@ const ProjectDisplay: React.FC<ProjectDisplayProps> = ({ title, description, lin
           ))}
         </div>
         <div className='flex justify-center sm:justify-start'>
+          {github !== "" &&
           <a href={github} target="_blank" rel="noreferrer" className="flex items-center text-black mr-4">
-            <img src='github.png' alt='Github link' className="h-6 w-6 mr-1" />
-            <span>{language==='en'?<p>View Project</p>:<p>Voir Projet</p>}</span>
-          </a>
+          <img src='github.png' alt='Github link' className="h-6 w-6 mr-1" />
+          <span>{language==='en'?<p>View Project</p>:<p>Voir Projet</p>}</span>
+        </a>
+          }
           {video ?
             <a href={videoLink} target="_blank" rel="noreferrer" className="flex items-center text-black">
               <img src='youtube.png' alt='Youtube link' className="mr-1" style={{ width: '1.5rem', height: '1.5rem' }}/>

@@ -17,10 +17,7 @@ const Navbar: React.FC<{ activeSection: string, changeLanguage: Function ,langua
     <nav className={`p-4 fixed top-0 w-full z-10 ${activeSection? activeSection : 'bg-slate-900'}`}>
       <div className="container mx-auto">
         <div className="flex flex-col sm:flex-row items-center justify-between">
-          <div className="flex items-center mb-2 sm:mb-0">
-            <div className="text-blue-700 font-bold text-5xl">{language==='en'?<p>My Portfolio</p>:<p>Mon portfolio</p>}</div>
-          </div>
-          
+          <div className="text-white text-2xl font-mono font-bold">Cristian Barros Ferreira</div>
           <div className='flex'>
             <a href='https://github.com/CrisWillCarry'>
               <img src='/github.png' alt='github' className='rounded cursor-pointer' style={{ width: '7vh', height: '7vh' }} />
@@ -42,10 +39,10 @@ const Navbar: React.FC<{ activeSection: string, changeLanguage: Function ,langua
               {language==='en'?<p>Home</p>:<p>Accueil</p>}
             </li>
             <li
-              className={`text-white text-base sm:text-lg font-mono font-bold hover:bg-gray-700 px-2 py-1 rounded cursor-pointer ${activeSection === 'projects' && 'bg-gray-700'}`}
-              onClick={() => scrollToSection('projects')}
+              className={`text-white text-base sm:text-lg font-mono font-bold hover:bg-gray-700 px-2 py-1 rounded cursor-pointer ${activeSection === 'about' && 'bg-gray-700'}`}
+              onClick={() => scrollToSection('background')}
             >
-              {language==='en'?<p>Projects</p>:<p>Projets</p>}
+              {language==='en'?<p>Background</p>:<p>Parcours</p>}
             </li>
             <li
               className={`text-white text-base sm:text-lg font-mono font-bold hover:bg-gray-700 px-2 py-1 rounded cursor-pointer ${activeSection === 'skills' && 'bg-gray-700'}`}
@@ -54,16 +51,10 @@ const Navbar: React.FC<{ activeSection: string, changeLanguage: Function ,langua
               {language==='en'?<p>Skills</p>:<p>Compétences</p>}
             </li>
             <li
-              className={`text-white text-base sm:text-lg font-mono font-bold hover:bg-gray-700 px-2 py-1 rounded cursor-pointer ${activeSection === 'about' && 'bg-gray-700'}`}
-              onClick={() => scrollToSection('about')}
+              className={`text-white text-base sm:text-lg font-mono font-bold hover:bg-gray-700 px-2 py-1 rounded cursor-pointer ${activeSection === 'projects' && 'bg-gray-700'}`}
+              onClick={() => scrollToSection('projects')}
             >
-              {language==='en'?<p>About</p>:<p>À propos</p>}
-            </li>
-            <li
-              className={`text-white text-base sm:text-lg font-mono font-bold hover:bg-gray-700 px-2 py-1 rounded cursor-pointer ${activeSection === 'reviews' && 'bg-gray-700'}`}
-              onClick={() => scrollToSection('reviews')}
-            >
-              {language==='en'?<p>Reviews</p>:<p>Commentaires</p>}
+              {language==='en'?<p>Projects</p>:<p>Projets</p>}
             </li>
             <li
               className={`text-white text-base  hover:scale-110 border sm:text-lg font-mono font-bold hover:bg-gray-700 px-2 py-1 rounded cursor-pointer ${activeSection === 'contact' && 'bg-gray-700'}`}

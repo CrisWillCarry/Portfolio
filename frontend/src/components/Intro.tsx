@@ -16,7 +16,7 @@ const Intro = ({language}: {language: String}) => {
   return (
     <div id="intro" className="flex flex-col sm:flex-row mt-20 ml-2 lg:ml-52 lg:mr-40 pt-32">
       <div className="text-white lg:text-left pr-8">
-        <h1 className="flex text-4xl lg:text-5xl font-bold mb-4">{language === 'en'? <p>Hi everyone! </p>: <p>Salut!</p>}<span className="animate-[wave_5s_ease-in-out_5]">👋🏻</span></h1>
+        <h1 className="flex text-4xl lg:text-5xl font-bold mb-4">{language === 'en'? <p>Hi </p>: <p>Salut</p>}<span className="animate-[wave_5s_ease-in-out_5] ml-5">👋🏻</span></h1>
         <p className="text-6xl lg:text-6xl text-blue-400">
           <span className="text-red-500">{language === 'en'? <p>My name is Cristian,</p>:<p>Je m'appelle Cristian,</p>}</span> {language==='en'? <p> I'm a Software Developer.</p>: <p> je suis un développeur de logiciels.</p>}
         </p>
