@@ -9,7 +9,7 @@
 }
 
 .projects {
-  background-color: #19013f;
+  background-color: #2f009c;
   transition: background-color 0.5s ease;
 }
 
@@ -19,16 +19,11 @@
 }
 
 .background {
-  background-color: #2f009c;
-  transition: background-color 0.5s ease;
-}
-
-.reviews {
-  background-color: #3d04c2;
+  background-color: #19013f;
   transition: background-color 0.5s ease;
 }
 
 .contact {
-  background-color: #4d01ff;
+  background-color: #3d04c2;
   transition: background-color 0.5s ease;
 }
