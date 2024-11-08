@@ -39,7 +39,7 @@ const Navbar: React.FC<{ activeSection: string, changeLanguage: Function ,langua
               {language==='en'?<p>Home</p>:<p>Accueil</p>}
             </li>
             <li
-              className={`text-white text-base sm:text-lg font-mono font-bold hover:bg-gray-700 px-2 py-1 rounded cursor-pointer ${activeSection === 'about' && 'bg-gray-700'}`}
+              className={`text-white text-base sm:text-lg font-mono font-bold hover:bg-gray-700 px-2 py-1 rounded cursor-pointer ${activeSection === 'background' && 'bg-gray-700'}`}
               onClick={() => scrollToSection('background')}
             >
               {language==='en'?<p>Background</p>:<p>Parcours</p>}
