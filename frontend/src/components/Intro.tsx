@@ -31,7 +31,7 @@ const Intro = ({language}: {language: String}) => {
             <div className="inline-block align-bottom bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4 text-center rounded-lg overflow-hidden shadow-xl transform transition-all sm:align-middle sm:max-w-lg sm:w-full">
               <h3 className="text-xl leading-6 font-medium text-gray-900">{language==='en'?<p>Choose a Language</p>:<p>choisir une langue</p>}</h3>
               <div className="mt-4">
-                <a href='https://drive.google.com/file/d/1zsIM9g7HSsSa99K3COjxvG-AM2uya6LZ/view?usp=sharing' target="_blank" rel="noopener noreferrer">
+                <a href='https://drive.google.com/file/d/1VrpKXQWOX0m4U-1q_ce7Uf8-rip0UEah/view?usp=sharing' target="_blank" rel="noopener noreferrer">
                   <button className="inline-block w-24 px-4 py-2 border border-transparent text-md font-medium rounded-md text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 mr-10"
                   >
                     {language==='en'?<p>English</p>:<p>Anglais</p>}
