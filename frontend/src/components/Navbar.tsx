@@ -33,31 +33,31 @@ const Navbar: React.FC<{ activeSection: string, changeLanguage: Function ,langua
 
           <ul className="flex space-x-2 sm:space-x-4">
             <li
-              className={`text-white text-base sm:text-lg font-mono font-bold hover:bg-gray-700 px-2 py-1 rounded cursor-pointer ${activeSection === 'intro' && 'bg-gray-700'}`}
+              className={`text-white text-sm sm:text-lg font-mono font-bold hover:bg-gray-700 px-2 py-1 rounded cursor-pointer ${activeSection === 'intro' && 'bg-gray-700'}`}
               onClick={() => scrollToSection('intro')}
             >
               {language==='en'?<p>Home</p>:<p>Accueil</p>}
             </li>
             <li
-              className={`text-white text-base sm:text-lg font-mono font-bold hover:bg-gray-700 px-2 py-1 rounded cursor-pointer ${activeSection === 'background' && 'bg-gray-700'}`}
+              className={`text-white text-sm sm:text-lg font-mono font-bold hover:bg-gray-700 px-2 py-1 rounded cursor-pointer ${activeSection === 'background' && 'bg-gray-700'}`}
               onClick={() => scrollToSection('background')}
             >
               {language==='en'?<p>Background</p>:<p>Parcours</p>}
             </li>
             <li
-              className={`text-white text-base sm:text-lg font-mono font-bold hover:bg-gray-700 px-2 py-1 rounded cursor-pointer ${activeSection === 'skills' && 'bg-gray-700'}`}
+              className={`text-white text-sm sm:text-lg font-mono font-bold hover:bg-gray-700 px-2 py-1 rounded cursor-pointer ${activeSection === 'skills' && 'bg-gray-700'}`}
               onClick={() => scrollToSection('skills')}
             >
               {language==='en'?<p>Skills</p>:<p>Compétences</p>}
             </li>
             <li
-              className={`text-white text-base sm:text-lg font-mono font-bold hover:bg-gray-700 px-2 py-1 rounded cursor-pointer ${activeSection === 'projects' && 'bg-gray-700'}`}
+              className={`text-white text-sm sm:text-lg font-mono font-bold hover:bg-gray-700 px-2 py-1 rounded cursor-pointer ${activeSection === 'projects' && 'bg-gray-700'}`}
               onClick={() => scrollToSection('projects')}
             >
               {language==='en'?<p>Projects</p>:<p>Projets</p>}
             </li>
             <li
-              className={`text-white text-base  hover:scale-110 border sm:text-lg font-mono font-bold hover:bg-gray-700 px-2 py-1 rounded cursor-pointer ${activeSection === 'contact' && 'bg-gray-700'}`}
+              className={`text-white text-sm  hover:scale-110 border sm:text-lg font-mono font-bold hover:bg-gray-700 px-2 py-1 rounded cursor-pointer ${activeSection === 'contact' && 'bg-gray-700'}`}
               onClick={() => scrollToSection('contact')}
             >
               {language==='en'?<p>Contact me</p>:<p>Contactez-moi</p>}
