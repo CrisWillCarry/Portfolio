@@ -6,7 +6,7 @@ import { MdTimeline } from "react-icons/md";
 const Background: React.FC<{ language: string }> = ({ language }) => {
     const timelineEvents = [
         {
-            date: "March - May 2024",
+            date: language === 'en' ? "March - May 2024" : "Mars - Mai 2024",
             icon: <FaBriefcase />,
             title: language === 'en' 
                 ? "uOttawa - Applied Machine Learning Intern" 
@@ -14,10 +14,9 @@ const Background: React.FC<{ language: string }> = ({ language }) => {
             text: language === 'en' 
                 ? "Built and deployed a Convolutional Neural Network (CNN) that performed binary classification on network traffic requests from IoT devices to mitigate malicious attacks." 
                 : "Conçu et déployé un Réseau Neuronal Convolutionnel (CNN) effectuant une classification binaire sur les requêtes de trafic réseau des appareils IoT pour atténuer les attaques malveillantes."
-        }
-        ,
+        },
         {
-            date: "June 2024",
+            date: language === 'en' ? "June 2024" : "Juin 2024",
             icon: <FaGraduationCap />,
             title: language === 'en' 
                 ? "Champlain College - D.E.C. Computer Science Graduate" 
@@ -27,7 +26,7 @@ const Background: React.FC<{ language: string }> = ({ language }) => {
                 : "Diplômé du programme de D.E.C. en informatique de 3 ans au Collège Champlain, avec une base solide en développement logiciel et informatique."
         },
         {
-            date: "July 2024 - Present",
+            date: language === 'en' ? "September 2023 - Present" : "Septembre 2023 - Présent",
             icon: <FaLaptopCode />,
             title: language === 'en' 
                 ? "Peça Estilosa BB - Full Stack Developer" 
@@ -37,7 +36,7 @@ const Background: React.FC<{ language: string }> = ({ language }) => {
                 : "Développe une boutique en ligne pour Peça Estilosa BB, couvrant les flux utilisateurs authentifiés et non authentifiés, ainsi qu'un panneau d'administration complet."
         },
         {
-            date: "October 2024 - Present",
+            date: language === 'en' ? "October 2023 - Present" : "Octobre 2023 - Présent",
             icon: <MdTimeline />,
             title: language === 'en' 
                 ? "OutlierAI - AI Code Trainee" 
@@ -47,6 +46,7 @@ const Background: React.FC<{ language: string }> = ({ language }) => {
                 : "Commencé en tant que stagiaire en code IA chez OutlierAI, en se concentrant sur l'expansion des compétences en intelligence artificielle et en pratiques de codage avancées."
         },
     ];
+    
 
     return (
         <div id="background" className=" mx-auto w-11/12 sm:ml-5 xl:ml-24 p-10 bg-gradient-to-b from-gray-900 to-gray-800 rounded-lg shadow-2xl">
