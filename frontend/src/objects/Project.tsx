@@ -149,7 +149,7 @@ export const Projects: Project[] = [
         logo: "acms.svg",
         description_en: " An end-to-end web application for Atelier Mecanique CMS Inc. The system orchestrates appointment management, cost computation, and billing interactions with clients. ",
         description_fr: "Une application web de bout en bout pour Atelier Mecanique CMS Inc. Le système orchestre la gestion des rendez-vous, le calcul des coûts et les interactions de facturation avec les clients.",
-        link: "https://react-atelier.onrender.com/",
+        link: "",
         github: "https://github.com/CrisWillCarry/ateliermecanique-ws/tree/main",
         video: false,
         skills : [
